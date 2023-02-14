@@ -8,11 +8,11 @@ type ProductCardProps = {
 
 export const ProductCard = (props: ProductCardProps) => {
   const { product } = props;
-  const { id, description, images, title } = product;
+  const { id, images, title, price } = product;
 
   return (
-    <div key={id} className="aspect-sqaure mx-4 mb-2">
-      <div className="relative aspect-video">
+    <div key={id} className="aspect-squre mx-4 mb-2">
+      <div className="relative aspect-[6/5]">
         {images[0] && (
           <Image
             alt={title}
@@ -29,9 +29,8 @@ export const ProductCard = (props: ProductCardProps) => {
       <div className="flex m-2">
         <div className="ml-2">
           <p className="font-semibold">{title}</p>
-
           <div className="text-xs text-gray-700">
-            <p>{}</p>
+            <div>${price}</div>
           </div>
         </div>
       </div>

@@ -30,6 +30,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       products: products.body.data.products.edges.map((e: any) => ({
         ...e.node,
         images: e.node.images.edges.map((image: any) => image.node),
+        price: e.node.variants.edges[0].node.priceV2.amount,
       })),
     },
   };

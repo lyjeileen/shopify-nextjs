@@ -5,6 +5,7 @@ export type ProductItem = {
   id: string;
   images: ImageItem[];
   title: string;
+  price: string;
 };
 
 type ImageItem = {
