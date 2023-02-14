@@ -9,10 +9,10 @@ type ProductCardProps = {
 
 export const ProductCard = (props: ProductCardProps) => {
   const { product } = props;
-  const { id, images, title, price } = product;
+  const { handle, images, title, price } = product;
 
   return (
-    <Link href={`product/${product.id}`}>
+    <Link href={`product/${handle}`}>
       <div className="relative aspect-[6/5]">
         {images[0] && (
           <Image
