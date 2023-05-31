@@ -27,9 +27,7 @@ export default function SingleProduct(props: ProductProps) {
   return (
     <>
       <h1>{title}</h1>
-
       <div>{imageList}</div>
-
       <p>${price}</p>
       <h2>Description:</h2>
       <p>{description}</p>
