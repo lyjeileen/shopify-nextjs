@@ -10,7 +10,7 @@ type ProductProps = {
   images: [string];
 };
 
-type image = {
+type Image = {
   node: {
     originalSrc: string;
     altText: null;
@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { description, id, title, images, variants } =
     product.body.data.productByHandle;
 
-  const imageURLs = images.edges.map((image: image) => image.node.originalSrc);
+  const imageURLs = images.edges.map((image: Image) => image.node.originalSrc);
 
   return {
     props: {
